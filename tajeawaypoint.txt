@@ -1,0 +1,40 @@
+// Backend flow 
+// model/ schema -> data lai kasari db ma save garni ,kasto type ma save garni 
+//controller -> logic handler k k logic handle garne
+//routes-> route define garera controller segregate garne
+//index.js-> mail file
+
+//CRUD -> operation 
+
+c - create 
+r - read 
+u - update 
+d - delete 
+
+ // method 
+
+ get - post 
+ post - get 
+ patch - patch
+ delete - delete
+
+ status code
+
+ 200 - ok 
+ 201 - created 
+ 404 - not found 
+ 403- forbidden
+ 500 - internal server error 
+ 503 - bad gate way 
+
+json (java script object notation)
+=> standard format to exchange data between client (front end) and server (backend)
+key value pair - key are also wraped in " "
+
+
+rest api : client sserver (communicate )
+uses http method (get ,post ,patch ,delete)
+needs json format for data exchange and communicate either on data of frontend or response from server
+needs status code
+
+
