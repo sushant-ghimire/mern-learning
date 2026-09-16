@@ -1,13 +1,16 @@
 const express= require("express");
 // const login = require("./controller/user.controller")
+const authRouter = require("./route/user.route");
+const connectDb = require("./config/connectMongoos");
+
 
 const app = express();
-
+app.use(express.json()) // app lai json banera bujauxa
+connectDb();
 console.log("hello")
 const port=8000
 
 app.listen(port,()=>{
-    console.log(`helo ma express bata aako${port}`);
 })
 
 app.get("/test",(req,res)=>{
@@ -15,7 +18,7 @@ app.get("/test",(req,res)=>{
 })
 
 app.get("/",(req,res)=>{
-    res.send("hello fom sushant")
+    res.send("hello fom main")
 })
 
 
@@ -25,9 +28,10 @@ app.get("/",(req,res)=>{
 
 
 
-const user=require("./data/user.json");
-const { login } = require("./controller/user.controller");
+// const user=require("./data/user.json");
+// const { login } = require("./controller/user.controller");
 
-console.log(user)
 
-login()
+// login()
+
+app.use("/auth", authRouter);

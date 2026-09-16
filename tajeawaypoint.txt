@@ -37,4 +37,20 @@ uses http method (get ,post ,patch ,delete)
 needs json format for data exchange and communicate either on data of frontend or response from server
 needs status code
 
+Very imp 
+
+model/schema
+    |
+    |
+   \/
+controller
+    |
+    |
+   \/
+route
+    |
+    |
+   \/
+index.js
+
 
