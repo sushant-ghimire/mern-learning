@@ -54,3 +54,13 @@ route
 index.js
 
 
+
+database ma data create garna lai 
+
+create()
+find()
+findById()
+findByIdAndUpdate()
+delete()
+
+
