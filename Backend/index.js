@@ -3,12 +3,16 @@ const express= require("express");
 const authRouter = require("./route/user.route");
 const connectDb = require("./config/connectMongoos");
 const productRouter = require("./route/product.route");
+const {connectPostgres} = require("./config/connectPostgres");
+const authRouterPost = require("./route/auth.route");
+require("dotenv").config();
 
 
 const app = express();
 app.use(express.json()) // app lai json banera bujauxa
 connectDb();
-const port=8000
+connectPostgres();
+const port= process.env.port;
 
 app.listen(port,()=>{
 console.log(`Server Running At  ${port}`)
@@ -38,3 +42,6 @@ app.get("/",(req,res)=>{
 app.use("/auth", authRouter);
 
 app.use("/product",productRouter);
+
+
+app.use("/authPost",authRouterPost)

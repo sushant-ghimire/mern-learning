@@ -12,12 +12,15 @@ const userSchema = new Schema({
     },
     password:{
         type: "String",
-        required:(true,"Password name is required")
+        required:(true,"Password name is required"),
+        select: false
+    
     },
     isVerified:{
         type:"Boolean",
         required:true,
-        default: false
+        default: false,
+        select: false
     },
     gender:{
         type: "String",
