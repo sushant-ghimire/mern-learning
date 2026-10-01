@@ -1,12 +1,12 @@
-const { DataTypes } = require("sequelize");
+const { DataTypes, UUIDV4 } = require("sequelize");
 const { postgres } = require("../config/connectPostgres");
 
 
 const authmodel = postgres.define("auth",{
     id:{
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         primaryKey :true,
-        autoIncrement: true,
+        defaultValue:UUIDV4,
         allowNull:false
     },
     name:{
